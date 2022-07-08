@@ -24,9 +24,10 @@ interface Props {
   shooter: Film[];
   western: Film[];
 }
-
-const Home = ({ love, fantasy, noire, shooter, triller, western }: Props) => {
-  // console.log(love)
+// console.log(love)
+const Home = () => {
+  // import {love} from '../utils/utilData'
+  // console.log(love);
   return (
     <div
       className="relative h-screen bg-gradient-to-b from-gray-900/10 
@@ -41,7 +42,7 @@ const Home = ({ love, fantasy, noire, shooter, triller, western }: Props) => {
       <Header />
       <main>
         {/* Banner */}
-        <Banner triller={triller}/>
+        <Banner love={love}/>
         <section>
           {/* ROW */}
           {/* ROW */}
