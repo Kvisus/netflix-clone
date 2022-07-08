@@ -24,13 +24,19 @@ function Banner({ love }: Props) {
 
   return (
     <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
+      {/* Image */}
       <div className="absolute top-0 left-0 h-[95vh] w-screen -z-10">
-        <Image src={movie.posterUrlPreview} layout="fill" objectFit="cover" />
+        <Image src={movie.posterUrlPreview} layout="fill" objectFit="contain" />
       </div>
+      {/* Movie */}
       <h1 className="text-2xl md:text-4xl lg:text-7xl font-bold">
         {movie?.nameRu || movie?.nameOriginal || movie?.nameEn}
       </h1>
-      <p className="max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">
+    {/* preview */}
+      <p
+        className="max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl
+      text-shadow-md"
+      >
         {lorem}
       </p>
       {/* button containter */}
