@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import Row from "../components/Row";
 import { Film } from "../typings";
 import requests from "../utils/requests";
 import {
@@ -17,9 +18,9 @@ import {
 } from "../utils/utilData";
 
 interface Props {
+  love: Film[];
   fantasy: Film[];
   triller: Film[];
-  love: Film[];
   noire: Film[];
   shooter: Film[];
   western: Film[];
@@ -43,12 +44,13 @@ const Home = () => {
       <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
         {/* Banner */}
         <Banner love={love}/>
-        <section>
+        <section className="md:space-y-24">
           {/* ROW */}
-          {/* ROW */}
-          {/* ROW */}
-          {/* ROW */}
-          {/* ROW */}
+          <Row title='fantasy' movies={fantasy}/>
+          <Row title='triller' movies={triller}/>
+          {/* My List */}
+          <Row title='noire' movies={noire}/>
+          <Row title='western' movies={western}/>
         </section>
       </main>
       {/* modal */}
